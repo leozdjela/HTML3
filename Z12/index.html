@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava ispita</title>
+    <link rel="stylesheet" href="stil.css">
+    
+</head>
+<body>
+    
+    <header>
+        <img src="logo.png" height="100" width="150">
+        <!--Slika preuzeta s https://studomat.ba/debatologija-daje-priliku-svima-da-govore-o-aktuelnim-problemima/13960/studomat_logo_novi/ -->
+    </header>
+    <form  action="akcija.php" method="GET">
+        <fieldset class="dolje">
+          <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+            Osobni podaci
+          </legend>
+          <ruby>
+            <rb>Započni s prijavom</rb>
+            <rp>（</rp><rt>Početak</rt><rp>）</rp>
+          </ruby>
+          <hr>
+            <input type="text" id="ime_klijent" name="ime_server"
+            placeholder="Unesi ime"/>
+
+            <hr/>
+            <input type="email" placeholder="Email"/>
+
+            <hr/>
+            <input type="password" placeholder="Lozinka"/>
+        </fieldset>
+        <keygen name="security">
+    </form>
+    <fieldset class="gore">
+        <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+          Podaci o studiju
+        </legend>
+          
+          <b>Razina studija</b>  
+          <hr>
+          <label for="preddiplomski_studij">Preddiplomski studij</label>
+          <input type="radio" id="preddiplomski" name="razina_studija">
+          <br>
+
+          <label for="diplomski_studij">Diplomski studij</label>
+          <input type="radio" id="diplomski" name="razina_studija">
+          <hr>
+          
+          <label for="studij"><b>Godina studija</b></label>
+          <select  name="studij" id="studij">
+            <optgroup label="Preddiplomski studij">
+              <option value="prva">1. godina</option>
+              <option value="druga">2. godina</option>
+              <option value="treca">3. godina</option>
+            </optgroup>
+            <optgroup label="Diplomski studij">
+              <option value="prva">1. godina</option>
+              <option value="druga">2. godina</option>
+            </optgroup>
+          </select> 
+
+          <hr>
+
+          <legend><b>Predmet</b></legend>
+        <select name="Kolegiji" id="kolegiji">
+            <option value="IZIS">IZIS</option>
+            <option value="OMS">OMS</option>
+            <option value="OPK">UUOI</option>
+            <option value="SKIC">SKIČ</option>
+            <option value="OPK">OPK</option>
+            <option value="OIS">OIS</option>
+            <option value="EKHDZ3">EKHDZ3</option>
+            <option value="KNNJD">KNNJD</option>
+        </select>
+        <hr>
+
+        <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+            Ispitni rok
+          </legend>
+          <label for="ispitni"><b>Odaberi ispitni rok</b></label>
+          <select name="ispitni" id="ispitni">
+            <option value="zimski">zimski</option>
+            <option value="ljetni">ljetni</option>
+          </select>
+          <hr>
+
+          <fieldset>
+            <legend><b>Uspjeh</b></legend>
+            <label for="file">Vaš opći uspjeh:</label>
+            <progress id="file" value="75" max="100">75%</progress>
+            <hr>
+    
+            <label for="file">Opći uspjeh generacije:</label>
+            <progress id="file" value="45" max="100">45%</progress>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend><b>Položeni ispiti</b></legend>
+                <label for="polozeni_ispiti">Broj do sada položenih ispita</label>
+                <input list="polozeni_ispiti" id="polozeni_ispiti" name="polozeni_ispiti" />
+                <datalist id="polozeni_ispiti">
+                    <option value="1 ispit">
+                    <option value="2 ispita">
+                    <option value="3 ispita">
+                    <option value="4 ispita">
+                </datalist>
+                <br>
+                <label for="preostalo_vrijeme">Postotak rješenih ispita</label>
+        <meter id="preostalo_vrijeme" value="0.5">50%</meter>
+                <hr>
+                <fieldset>
+                    <label for="ispit">Ocijenite težinu ispita od 1 do 10</label>
+                    <form oninput="result.value=parseInt(ispit.value)">
+                    <input type="range" id="semestar" name="semestar" value="10" /> 
+                    <output name="result" for="semestar">10</output>
+                    </form>
+                </fieldset>
+                <hr>
+
+
+            <fieldset>
+                <textarea name="pitanja" id="pitanja" cols="85" rows="8">
+                Postavite pitanja ukoliko ih imate :D
+                </textarea>
+            </fieldset>
+            <br>
+            <button class="Spremi" type="submit">Spremi</button>
+            <ruby>
+                <rb>Provjeriti upisane podatke prije spremanja</rb>
+                <rp>(</rp><rt>Spremljeni podaci ne mogu se mijenjati</rt><rp></rp>
+            </ruby>
+
+</body>
+</html>

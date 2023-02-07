@@ -1,0 +1,30 @@
+body{
+    background-color: antiquewhite;
+    text-align: center;
+    
+}
+ruby{
+    ruby-align: center;
+    ruby-position: inline;
+    ruby-overhang: none;
+}
+select{
+    page-break-inside: auto;
+    page-break-after: auto;
+    widows: initial;
+}
+button{
+    color: aquamarine;
+    page-break-before: auto;
+}
+option{
+    orphans: 0;
+}
+
+
+
+     
+
+
+
+    
